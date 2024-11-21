@@ -1,12 +1,21 @@
 
 import {Top} from './Top';
 import {Content} from './Content';
+import {useState} from "react";
 
 function App() {
+  const [pageName, setPageName] = useState("Top");
+
   return (
     <>
-      <Top />
-      <Content />
+      {pageName === "Top" && 
+        <Top 
+          setPageName = {setPageName}
+        />
+      }
+      {pageName === "Content" &&
+        <Content />
+      }
     </>
     // <div className="App">
     //   <header className="App-header">

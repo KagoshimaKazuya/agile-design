@@ -1,7 +1,15 @@
 import icon from './img/book.jpg';
 import './Top.css';
+import {useState} from "react";
 
-export const Top = () => {
+export const Top = (props) => {
+    const { setPageName } = props;
+    const [books, setBooks] = useState(["本1", "本2", "本3", "本4", "本5", "本6"])
+
+    const onClickIcon = (pageName) => {
+        setPageName(pageName)
+    };
+
     return(
         <>
             <div className="main">
@@ -14,43 +22,26 @@ export const Top = () => {
                 <div className="content">
 
 
-                    <div>
-                        <input
+                    <div className="search-area">
+                        <input className="form"
                             placeholder="タイトルを入力"
                         />
+                        <button className="search-button" onClick={() => alert("検索は未実装です")}>🔍</button>
+
                     </div>
 
                     <div className="grid">
 
-                        <div>
-                            <img src={icon} alt="img"/>
-                            <p>タイトル1</p>
-                        </div>
+                        {books.map((title) => (
+                            <div key={title}>
+                                <button onClick={() => onClickIcon("Content")}>
+                                    <img src={icon} alt="img"/>
+                                </button>
+                                <p>{title}</p>
+                            </div>
+                        ))}
 
-                        <div>
-                            <img src={icon} alt="img"/>
-                            <p>タイトル2</p>
-                        </div>
 
-                        <div>
-                            <img src={icon} alt="img"/>
-                            <p>タイトル3</p>
-                        </div>
-
-                        <div>
-                            <img src={icon} alt="img"/>
-                            <p>タイトル4</p>
-                        </div>
-
-                        <div>
-                            <img src={icon} alt="img"/>
-                            <p>タイトル5</p>
-                        </div>
-
-                        <div>
-                            <img src={icon} alt="img"/>
-                            <p>タイトル6</p>
-                        </div>
                     </div>
 
                 </div>
