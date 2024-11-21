@@ -1,0 +1,26 @@
+.main{
+    display: flex;
+    min-height: 100vh;
+    background-color: #999;
+}
+
+.leftNavigation{
+    width: 250px;
+    text-align:center;
+    background-color: #888;
+    color: #fff;
+}
+
+.content{
+    flex: 1;
+    background-color: #eee;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.grid{
+    display: grid;
+    gap: 26px;
+    grid-template-columns:repeat(3, minmax(240px,1fr));
+    margin-top: 6%;
+}
