@@ -6,6 +6,7 @@
 
 .leftNavigation{
     width: 250px;
+    min-width: 250px;
     text-align:center;
     background-color: #888;
     color: #fff;
@@ -16,6 +17,24 @@
     background-color: #eee;
     text-align: center;
     margin-left: 10px;
+}
+
+.search-area{
+    margin: 8px;
+    padding: 8px;
+    height: 30px;
+}
+
+.form{
+    height: 2em;
+    width: 30em;
+    margin: 4px;
+}
+
+.search-button{
+    height: 3em;
+    width: 4em;
+    margin: 4px;
 }
 
 .grid{
