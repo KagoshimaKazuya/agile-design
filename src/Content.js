@@ -21,7 +21,7 @@ export const Content = () => {
                     </div>
                     <footer>
                         <div className="arrowgramleft">
-                            <button>◀</button>
+                            <button><font size="5">◀</font></button>
                         </div>
 
                         <div className="pages">
@@ -29,7 +29,7 @@ export const Content = () => {
                         </div>
 
                         <div className="arrowgramright">
-                        <button>▶</button>
+                            <button><font size="5">▶</font></button>   
                         </div>
                     </footer>
                 </div>
