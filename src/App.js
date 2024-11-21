@@ -14,7 +14,9 @@ function App() {
         />
       }
       {pageName === "Content" &&
-        <Content />
+        <Content
+          setPageName = {setPageName}
+        />
       }
     </>
     // <div className="App">

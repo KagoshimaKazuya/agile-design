@@ -1,7 +1,11 @@
 import page01 from './img/01.png';
 import './Content.css'
 
-export const Content = () => {
+export const Content = (props) => {
+    const { setPageName } = props;
+    const returnTop = () => {
+        setPageName("Top");
+    }
     return(
         <>
             <div className="main">
@@ -13,7 +17,7 @@ export const Content = () => {
 
 
                     <div className="contentheader">
-                        <button><font size="7">×</font></button>
+                        <button onClick={() => returnTop()}><font size="7">×</font></button>
                     </div>
 
                     <div className="reader">
