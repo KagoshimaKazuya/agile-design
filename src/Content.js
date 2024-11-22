@@ -1,4 +1,6 @@
 import page01 from './img/01.png';
+import page02 from './img/02.png';
+import page03 from './img/03.png';
 import './Content.css'
 import { useState } from 'react';
 
@@ -21,23 +23,30 @@ export const Content = (props) => {
     const isMinLimitPages = pagenum <= 0;
     
     return(
-        <
+        <>
 
                     <div className="contentheader">
                         <button onClick={() => returnTop()}><font size="7">×</font></button>
                     </div>
 
                     <div className="reader">
+                       
                         <div id="page-1" class="page active">
-                            <img src={page01} alt="img"/>
+                        {pagenum === 0 &&
+                            <img className="contentimg" src={page01} alt="img"/>
+                        }
                         </div>
 
                         <div id="page-2" class="page">
-                            <h1>page 2</h1>
+                        {pagenum === 1 &&
+                            <img className="contentimg" src={page02} alt="img"/>
+                        }
                         </div>
 
-                        <div id="page-2" class="page">
-                            <h1>page 3</h1> 
+                        <div id="page-3" class="page">
+                        {pagenum === 2 &&
+                            <img className="contentimg" src={page03} alt="img"/>
+                        }
                         </div>
 
                         

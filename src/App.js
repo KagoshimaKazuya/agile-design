@@ -13,7 +13,7 @@ function App() {
       <div className='whole'>
         <div className="leftNavigation">
           <SideMenu
-          
+            setPageName = {setPageName}
           />
         </div>
       
