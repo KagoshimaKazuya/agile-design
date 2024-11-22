@@ -1,5 +1,6 @@
 import page01 from './img/01.png';
 import './Content.css'
+import { useState } from 'react';
 
 export const Content = (props) => {
     const { setPageName } = props;
@@ -8,12 +9,9 @@ export const Content = (props) => {
     }
     return(
         <>
-            <div className="main">
-                <div className="leftNavigation">
-                    <p>サブメニュー</p>
+            
+                
 
-                </div>
-                <div className="content">
 
 
                     <div className="contentheader">
@@ -21,23 +19,37 @@ export const Content = (props) => {
                     </div>
 
                     <div className="reader">
-                        <img src={page01} alt="img"/>
+                        <div id="page-1" class="page active">
+                            <img src={page01} alt="img"/>
+                        </div>
+
+                        <div id="page-2" class="page">
+                            <h1>page 2</h1>
+                        </div>
+
+                        <div id="page-2" class="page">
+                            <h1>page 3</h1> 
+                        </div>
+
+                        
                     </div>
+
                     <footer>
                         <div className="arrowgramleft">
-                            <button><font size="5">◀</font></button>
+                            <button id ="prevPageBtn"><font size="5">◀</font></button>
                         </div>
 
                         <div className="pages">
-                            <p>ページ数</p>
+                            <p>p<span id="currentPageDisplay">1</span> </p>
                         </div>
 
                         <div className="arrowgramright">
-                            <button><font size="5">▶</font></button>   
+                            <button id ="nextPageBtn"><font size="5">▶</font></button>   
                         </div>
                     </footer>
-                </div>
-            </div>
+            
+            
         </>
     );
 };
+
