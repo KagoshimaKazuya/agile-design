@@ -2,23 +2,40 @@
 import {Top} from './Top';
 import {Content} from './Content';
 import {useState} from "react";
+import "./App.css";
+import { SideMenu } from './SideMenu';
 
 function App() {
   const [pageName, setPageName] = useState("Top");
 
   return (
     <>
-      {pageName === "Top" && 
-        <Top 
-          setPageName = {setPageName}
-        />
-      }
-      {pageName === "Content" &&
-        <Content
-          setPageName = {setPageName}
-        />
-      }
+      <div className='whole'>
+        <div className="leftNavigation">
+          <SideMenu
+          
+          />
+        </div>
+      
+        <div className="content">
+
+          {pageName === "Top" && 
+            <Top 
+              setPageName = {setPageName}
+            />
+          }
+          {pageName === "Content" &&
+            <Content
+              setPageName = {setPageName}
+            />
+          }
+
+        </div>
+
+      </div>
     </>
+
+
     // <div className="App">
     //   <header className="App-header">
     //     <img src={logo} className="App-logo" alt="logo" />

@@ -12,14 +12,9 @@ export const Top = (props) => {
 
     return(
         <>
-            <div className="main">
 
-                <div className="leftNavigation">
-                    <p>サブメニュー</p>
 
-                </div>
-
-                <div className="content">
+                
 
 
                     <div className="search-area">
@@ -44,8 +39,8 @@ export const Top = (props) => {
 
                     </div>
 
-                </div>
-            </div>
+                
+        
         </>
     );
 };

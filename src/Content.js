@@ -1,6 +1,6 @@
 import page01 from './img/01.png';
 import './Content.css'
-import {useState} from "react";
+import { useState } from 'react';
 
 export const Content = (props) => {
     const { setPageName} = props;
@@ -21,22 +21,28 @@ export const Content = (props) => {
     const isMinLimitPages = pagenum <= 0;
     
     return(
-        <>
-            <div className="main">
-                <div className="leftNavigation">
-                    <p>サブメニュー</p>
-
-                </div>
-                <div className="content">
-
+        <
 
                     <div className="contentheader">
                         <button onClick={() => returnTop()}><font size="7">×</font></button>
                     </div>
 
                     <div className="reader">
-                        <img src={page01} alt="img"/>
+                        <div id="page-1" class="page active">
+                            <img src={page01} alt="img"/>
+                        </div>
+
+                        <div id="page-2" class="page">
+                            <h1>page 2</h1>
+                        </div>
+
+                        <div id="page-2" class="page">
+                            <h1>page 3</h1> 
+                        </div>
+
+                        
                     </div>
+
                     <footer>
                         <div className="arrowgramleft">
                             <button disabled={isMinLimitPages} onClick={onClickCountDawn}><font size="5">
@@ -52,10 +58,12 @@ export const Content = (props) => {
                             <button disabled={isMaxLimitPages} onClick={onClickCountUp}><font size="5">
                                 ▶
                             </font></button>   
+
                         </div>
                     </footer>
-                </div>
-            </div>
+            
+            
         </>
     );
 };
+
