@@ -17,13 +17,13 @@ export const Top = (props) => {
                 
 
 
-                    <div className="search-area">
+                    {/* <div className="search-area">
                         <input className="form"
                             placeholder="タイトルを入力"
                         />
                         <button className="search-button" onClick={() => alert("検索は未実装です")}>🔍</button>
 
-                    </div>
+                    </div> */}
 
                     <div className="grid">
 

@@ -27,6 +27,9 @@ justify-content: center;
     color: #fff;
 }
 
+.contentimg{
+    width: 80vw;
+}
 
 footer{
     display: flex;
