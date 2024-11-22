@@ -3,16 +3,25 @@ import './Content.css'
 import { useState } from 'react';
 
 export const Content = (props) => {
-    const { setPageName } = props;
+    const { setPageName} = props;
     const returnTop = () => {
         setPageName("Top");
     }
+    const [pagenum, setPagenum] = useState(0);
+    
+    const onClickCountUp = () => {
+        setPagenum((prev) => prev + 1); 
+    }
+    
+    const onClickCountDawn = () => {
+        setPagenum((prev) => prev - 1);
+    };
+
+    const isMaxLimitPages = pagenum >= 2;
+    const isMinLimitPages = pagenum <= 0;
+    
     return(
-        <>
-            
-                
-
-
+        <
 
                     <div className="contentheader">
                         <button onClick={() => returnTop()}><font size="7">×</font></button>
@@ -36,15 +45,20 @@ export const Content = (props) => {
 
                     <footer>
                         <div className="arrowgramleft">
-                            <button id ="prevPageBtn"><font size="5">◀</font></button>
+                            <button disabled={isMinLimitPages} onClick={onClickCountDawn}><font size="5">
+                                ◀
+                            </font></button>
                         </div>
 
                         <div className="pages">
-                            <p>p<span id="currentPageDisplay">1</span> </p>
+                            <p>{pagenum*2+1}{", "}{pagenum*2+2}</p>
                         </div>
 
                         <div className="arrowgramright">
-                            <button id ="nextPageBtn"><font size="5">▶</font></button>   
+                            <button disabled={isMaxLimitPages} onClick={onClickCountUp}><font size="5">
+                                ▶
+                            </font></button>   
+
                         </div>
                     </footer>
             
