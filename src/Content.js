@@ -21,7 +21,7 @@ export const Content = (props) => {
     const isMinLimitPages = pagenum <= 0;
     
     return(
-        <
+        <>
 
                     <div className="contentheader">
                         <button onClick={() => returnTop()}><font size="7">×</font></button>
