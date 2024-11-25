@@ -25,12 +25,13 @@ export const Content = (props) => {
     return(
         <>
 
-                    <div className="contentheader">
+                    {/* <div className="contentheader">
                         <button onClick={() => returnTop()}><font size="7">×</font></button>
-                    </div>
-
+                    </div> */}
+            {/* <div className="content"> */}
+                <div className='mid'>
                     <div className="reader">
-                       
+                     
                         <div id="page-1" class="page active">
                         {pagenum === 0 &&
                             <img className="contentimg" src={page01} alt="img"/>
@@ -47,29 +48,38 @@ export const Content = (props) => {
                         {pagenum === 2 &&
                             <img className="contentimg" src={page03} alt="img"/>
                         }
-                        </div>
-
-                        
+                        </div> 
                     </div>
 
-                    <footer>
+                    <div className="footer">
                         <div className="arrowgramleft">
-                            <button disabled={isMinLimitPages} onClick={onClickCountDawn}><font size="5">
+                            <button disabled={isMinLimitPages} onClick={onClickCountDawn}><font className="arrowchar">
                                 ◀
                             </font></button>
                         </div>
 
                         <div className="pages">
-                            <p>{pagenum*2+1}{", "}{pagenum*2+2}</p>
+                            <p className="pagebox">{pagenum*2+1}{", "}{pagenum*2+2}</p>
                         </div>
 
                         <div className="arrowgramright">
-                            <button disabled={isMaxLimitPages} onClick={onClickCountUp}><font size="5">
+                            <button disabled={isMaxLimitPages} onClick={onClickCountUp}><font className="arrowchar">
                                 ▶
                             </font></button>   
 
                         </div>
-                    </footer>
+                    </div>
+
+                    
+
+
+                </div>
+
+
+                <div className='right'>
+                    <p>right</p>
+                </div>
+                        
             
             
         </>
