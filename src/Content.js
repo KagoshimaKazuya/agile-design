@@ -49,6 +49,35 @@ export const Content = (props) => {
                             <img className="contentimg" src={page03} alt="img"/>
                         }
                         </div> 
+
+                        <button disabled={isMinLimitPages}
+                            onClick={onClickCountDawn}
+                            style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            width: '50%',
+                            height: '100%',
+                            background: 'transparent',
+                            border: 'none',
+                            cursor: 'pointer',
+                            }}
+                        />
+                         <button disabled={isMaxLimitPages}
+                            onClick={onClickCountUp}
+                            style={{
+                            position: 'absolute',
+                            top: 0,
+                            right: 0,
+                            width: '50%',
+                            height: '100%',
+                            background: 'transparent',
+                            border: 'none',
+                            cursor: 'pointer',
+                            }}
+                        />
+ 
+
                     </div>
 
                     <div className="footer">
