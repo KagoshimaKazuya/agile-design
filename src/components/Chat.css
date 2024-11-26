@@ -1,0 +1,132 @@
+.quiz-output{
+    border: solid;
+    border-color: #8b8181;
+    border-radius: 8px;
+    height: 60%;
+    padding: 0.3em 1em;
+}
+
+#text-left{
+    text-align: left;
+}
+
+#text-right{
+    text-align: right;
+}
+
+#button-right{
+    margin-left:auto ;
+}
+
+
+.message-list{
+    display: inline-block;
+    width: 90%;
+    overflow-y: auto;
+    min-height:80vh;
+    max-height:80vh;
+    background-color: white;
+    border-radius: 8px;
+    margin: 8px;
+    text-align: left;
+}
+
+
+.message-block{
+    margin: 8px;
+}
+
+.quiz-create{
+    display: inline-block;
+    width: 90%;
+    overflow-y: auto;
+    min-height:80vh;
+    max-height:80vh;
+    background-color: rgb(210, 235, 191);
+    border-radius: 8px;
+    margin: 8px;
+    text-align: center;
+}
+
+.quiz-text{
+    margin: 0px;
+}
+
+.answer-input{
+    width: 15em;
+}
+
+.create-button{
+    font-size: 15px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 2px #89c3e7;
+    background-color: white;
+    border-radius: 3px;
+    transition: .4s;
+}
+
+.create-button:hover{
+    background: #89c3e7;
+    color: white;
+}
+
+.create-button:active{
+    border-bottom: solid 2px white;
+    box-shadow: 0 0 2px rgbargba(0, 0, 0, 0.30);
+}
+
+.user-name{
+    font-size: 0.5em;
+    margin: 0px;
+}
+
+.message{
+    display: inline-block;
+    background-color: rgb(225, 237, 241);
+    border-radius: 8px;
+    margin: 0px;
+    padding: 4px;
+}
+
+.input-block{
+    text-align: left;
+    margin: 4px;
+}
+
+.user-input{
+    width: 8em;
+}
+
+.message-input{
+    width: 12em;
+}
+
+#overlay{
+    /*　画面全体を覆う設定　*/
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background-color:rgba(0,0,0,0.5);
+    
+      /*　画面の中央に要素を表示させる設定　*/
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    
+    }
+
+    #content{
+        display: inline-block;
+        border-radius: 8px;
+        z-index:2;
+        width:60%;
+        height: 70vh;
+        padding: 1em;
+        background:#fff;
+      }

@@ -2,6 +2,7 @@ import page01 from './img/01.png';
 import page02 from './img/02.png';
 import page03 from './img/03.png';
 import './Content.css'
+import {Chat} from './components/Chat'
 import { useState } from 'react';
 
 export const Content = (props) => {
@@ -106,7 +107,7 @@ export const Content = (props) => {
 
 
                 <div className='right'>
-                    <p>right</p>
+                    <Chat />
                 </div>
                         
             
@@ -114,4 +115,3 @@ export const Content = (props) => {
         </>
     );
 };
-
