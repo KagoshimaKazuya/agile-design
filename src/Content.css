@@ -12,119 +12,6 @@
     justify-content: right;
   } */
 
-  .content{
-    /* flex: 1; */
-        position:absolute;
-        left: 20vw;
-        height: 100vh;
-        width: 100vw;
-        /* background-color: #993838; */
-        text-align: center;
-        margin-left: 10px;
-    }
-    
-    .mid{
-        width:70vw;
-        height:100vh;
-        /* background-color: rgb(0, 255, 0); */
-    }
-    
-    .right{
-        position:absolute;
-        top:0vh;
-        right: 0vw;
-        width:20vw;
-        height:100vh;
-    }
-    
-    .reader {
-        position:absolute;
-        top:0vh;
-        /* right: 1vw; */
-        width: 70vw;
-        height:95vh;
-        background-color: rgb(227, 236, 174);
-        justify-content: center;
-    }
-    
-    .footer {
-        display: flex;
-        position:absolute;
-        bottom:0vh;
-        /* right: 1vw; */
-        width: 70vw;
-        height:5vh;
-        /* background-color: rgb(238, 28, 171); */
-        justify-content: center;
-        }
-    
-    /*     
-    .leftNavigation{
-        width: 250px;
-        text-align:center;
-        background-color: #888;
-        color: #fff;
-    } */
-    
-    
-    
-    .contentimg{
-        position:absolute;
-        top: 10%;
-        left: 0%;
-        width: 70vw;
-    }
-    
-    /* footer{
-        display: flex;
-        height: 4vh;
-        background-color: #999;
-    } */
-    
-    .arrowgramright{
-        flex: 8;
-        text-align: left;
-        background-color: #888;
-        color: #fff;
-    }
-    
-    .arrowgramleft{
-        flex: 8;
-        text-align: right;
-        background-color: #888;
-        color: #fff;
-    }
-    
-    .pages{
-        flex: 1;
-        text-align: center;
-        background-color: #eee;
-    }
-    
-    .content{
-        flex: 1;
-        background-color: #eee;
-        text-align: center;
-        margin-left: 10px;
-    }
-    
-    .grid{
-        display: grid;
-        gap: 26px;
-        grid-template-columns:repeat(3, minmax(240px,1fr));
-        margin-top: 6%;
-    }
-    
-    .arrowchar{
-        /* position: absolute;
-        top:50%; */
-        font-size:100%;
-    }
-    
-    .pagebox{
-        font-size:100%;
-    }
-=======
 .content{
 /* flex: 1; */
     position:absolute;
@@ -148,7 +35,6 @@
     right: 0vw;
     width:20vw;
     height:100vh;
-    background-color: rgb(129, 141, 247);
 }
 
 .reader {
