@@ -2,6 +2,7 @@ import page01 from './img/01.png';
 import page02 from './img/02.png';
 import page03 from './img/03.png';
 import './Content.css'
+import {Chat} from './components/Chat'
 import { useState } from 'react';
 
 export const Content = (props) => {
@@ -25,12 +26,13 @@ export const Content = (props) => {
     return(
         <>
 
-                    <div className="contentheader">
+                    {/* <div className="contentheader">
                         <button onClick={() => returnTop()}><font size="7">×</font></button>
-                    </div>
-
+                    </div> */}
+            {/* <div className="content"> */}
+                <div className='mid'>
                     <div className="reader">
-                       
+                     
                         <div id="page-1" class="page active">
                         {pagenum === 0 &&
                             <img className="contentimg" src={page01} alt="img"/>
@@ -47,32 +49,69 @@ export const Content = (props) => {
                         {pagenum === 2 &&
                             <img className="contentimg" src={page03} alt="img"/>
                         }
-                        </div>
+                        </div> 
 
-                        
+                        <button disabled={isMinLimitPages}
+                            onClick={onClickCountDawn}
+                            style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            width: '50%',
+                            height: '100%',
+                            background: 'transparent',
+                            border: 'none',
+                            cursor: 'pointer',
+                            }}
+                        />
+                         <button disabled={isMaxLimitPages}
+                            onClick={onClickCountUp}
+                            style={{
+                            position: 'absolute',
+                            top: 0,
+                            right: 0,
+                            width: '50%',
+                            height: '100%',
+                            background: 'transparent',
+                            border: 'none',
+                            cursor: 'pointer',
+                            }}
+                        />
+ 
+
                     </div>
 
-                    <footer>
+                    <div className="footer">
                         <div className="arrowgramleft">
-                            <button disabled={isMinLimitPages} onClick={onClickCountDawn}><font size="5">
+                            <button disabled={isMinLimitPages} onClick={onClickCountDawn}><font className="arrowchar">
                                 ◀
                             </font></button>
                         </div>
 
                         <div className="pages">
-                            <p>{pagenum*2+1}{", "}{pagenum*2+2}</p>
+                            <p className="pagebox">{pagenum*2+1}{", "}{pagenum*2+2}</p>
                         </div>
 
                         <div className="arrowgramright">
-                            <button disabled={isMaxLimitPages} onClick={onClickCountUp}><font size="5">
+                            <button disabled={isMaxLimitPages} onClick={onClickCountUp}><font className="arrowchar">
                                 ▶
                             </font></button>   
 
                         </div>
-                    </footer>
+                    </div>
+
+                    
+
+
+                </div>
+
+
+                <div className='right'>
+                    <Chat />
+                </div>
+                        
             
             
         </>
     );
 };
-

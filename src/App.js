@@ -4,7 +4,6 @@ import {Content} from './Content';
 import {useState} from "react";
 import "./App.css";
 import { SideMenu } from './SideMenu';
-import {Chat} from './components/Chat';
 
 function App() {
   const [pageName, setPageName] = useState("Top");
@@ -19,9 +18,8 @@ function App() {
         </div>
       
         <div className="content">
-          <Chat />
 
-          {/* {pageName === "Top" && 
+          {pageName === "Top" && 
             <Top 
               setPageName = {setPageName}
             />
@@ -30,7 +28,7 @@ function App() {
             <Content
               setPageName = {setPageName}
             />
-          } */}
+          }
 
         </div>
 
