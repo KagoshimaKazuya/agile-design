@@ -18,9 +18,61 @@
     margin: 4px;
 }
 
-.grid{
+.grid-books{
     display: grid;
     gap: 26px;
-    grid-template-columns:repeat(3, minmax(240px,1fr));
-    margin-top: 6%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 2%;
+}
+
+.bookitem{
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.icons{
+    display: flex;
+    position: relative;
+    border: 0;
+    justify-content: center;
+}
+
+.bkmkicon{
+    position: absolute;
+    right: 0;
+    border: 0;
+    width: 50px;
+}
+
+.bookimg{
+    /* width: 100%; */
+    height: 100%;
+    opacity: 1;
+}
+
+.bookimg:hover{
+    opacity: 0.5;
+}
+
+.bkmkimg{
+    width: 100%;
+    opacity: 1;
+}
+
+.bkmkimg:hover{
+    opacity: 0.5;
+}
+
+.bookbutton{
+    padding: 0px;
+    border: 0;
+    margin: 2px;
+    /* width: 150px;    */
+    height: 200px;
+}
+
+.booktitle{
+    vertical-align: bottom;
+    font-size: smaller;
 }
