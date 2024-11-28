@@ -25,6 +25,14 @@ function App() {
     { index:7, title: 'ケアする人のためのプロジェクトデザイン', author:"西上ありさ", icon: icon7 },
     { index:8, title: 'イメージをパッと形に変えるデザイン大全', author:"尾沢早飛", icon: icon8 },
 ]);
+  const [usernames, setUsernames] = useState([
+    [],[],[],[],[],[],[],[],[]
+  ]
+  );  
+  const [messages, setMessages] = useState([
+    [],[],[],[],[],[],[],[],[]
+  ]);
+  const [readflag, setReadflag] = useState([false,false,false,false,false,false,false,false])
   const [bookmarks, setBookmarks] = useState([false, false, false, false, false, false, false, false]);
 
   return (
@@ -56,6 +64,12 @@ function App() {
               books = {books}
               bookmarks = {bookmarks}
               setPageName = {setPageName}
+              messages = {messages}
+              setMessages = {setMessages}
+              usernames = {usernames}
+              setUsernames = {setUsernames}
+              readflag = {readflag}
+              setReadflag = {setReadflag}
             />
           }
 

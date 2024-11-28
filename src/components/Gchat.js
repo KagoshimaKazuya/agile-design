@@ -3,14 +3,7 @@ import { useState } from 'react';
 import { useEffect, useRef } from 'react';
 
 export const GChat = (props) => {
-    const {bookIndex} = props;
-    const [usernames, setUsernames] = useState([
-        [],[],[],[],[],[],[],[],[]
-    ]
-    );
-    const [messages, setMessages] = useState([
-        [],[],[],[],[],[],[],[],[]
-    ]);
+    const {bookIndex, messages, setMessages, usernames, setUsernames} = props;
     const [username, setUsername] = useState("ゲスト");
     const [message, setMessage] = useState("");
 

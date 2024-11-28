@@ -8,8 +8,7 @@ import { useState } from 'react';
 
 export const List = (props) => {
     const [bookIndex, setBookIndex] = useState(0);
-    const [readflag, setreadflag] = useState([false,false,false,false,false,false,false,false])
-    const {books, bookmarks, setPageName} = props;
+    const {books, bookmarks, setPageName, messages, setMessages, usernames, setUsernames, readflag, setReadflag} = props;
     const filteredBooks = books.filter((book, index) =>
         bookmarks[index]
     );
@@ -23,7 +22,7 @@ export const List = (props) => {
         setBookIndex(index);
         let newReadflag = [...readflag];
         newReadflag[index-1] = true;
-        setreadflag(newReadflag);
+        setReadflag(newReadflag);
         return;
     }
     return(
@@ -64,6 +63,10 @@ export const List = (props) => {
             }
             <GChat 
                 bookIndex = {bookIndex}
+                messages = {messages}
+                setMessages = {setMessages}
+                usernames = {usernames}
+                setUsernames = {setUsernames}
             />
         </div>
     </div>
