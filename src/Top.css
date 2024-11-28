@@ -1,78 +1,131 @@
-
-
-.search-area{
+.search-area {
+    display: flex;
     margin: 8px;
     padding: 8px;
     height: 30px;
 }
 
-.form{
+.form {
+    font-size: large;
     height: 2em;
     width: 30em;
-    margin: 4px;
+    margin: 8px;
+    border-radius: 8px;
+    border: 4px double;
+    position: absolute;
+    right: 0;
 }
 
-.search-button{
+.search-button {
     height: 3em;
     width: 4em;
     margin: 4px;
 }
 
-.grid-books{
+.contact__form-box2 {
+    position: absolute;
+    right: 0;
+    margin: 40px;
+    top: 40px; /* チェックボックスが検索バーと重ならないように位置調整 */
+}
+
+.contact__form-box2 label {
+    padding-left: 40px;
+    font-size: 1.5em;
+}
+
+.contact__form-box2 input {
+    display: none;
+}
+
+.contact__form-box2 label:before {
+    opacity: 0;
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 15px;
+    border-right: 4px solid #4973FF;
+    border-bottom: 4px solid #4973FF;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0px;
+    left: 8px;
+}
+
+.contact__form-box2 label:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #3E3E3E;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contact__form-box2 input[type=checkbox]:checked + label:before {
+    opacity: 1;
+}
+
+.contact__form-box2 input[type=checkbox]:hover + label:after {
+    border: 1px solid #4973FF;
+    cursor: pointer;
+}
+
+.grid-books {
     display: grid;
     gap: 26px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-top: 2%;
+    margin-top: 7%;
 }
 
-.bookitem{
-    border: 2px solid;
+.bookitem {
+    background-color: #fffaf6;
     border-radius: 8px;
     padding: 4px;
 }
 
-.icons{
+.icons {
     display: flex;
     position: relative;
     border: 0;
     justify-content: center;
 }
 
-.bkmkicon{
+.bkmkicon {
+    background-color: #fffaf6;
     position: absolute;
     right: 0;
     border: 0;
     width: 50px;
 }
 
-.bookimg{
-    /* width: 100%; */
+.bookimg {
     height: 100%;
     opacity: 1;
 }
 
-.bookimg:hover{
+.bookimg:hover {
     opacity: 0.5;
 }
 
-.bkmkimg{
+.bkmkimg {
     width: 100%;
     opacity: 1;
 }
 
-.bkmkimg:hover{
+.bkmkimg:hover {
     opacity: 0.5;
 }
 
-.bookbutton{
+.bookbutton {
     padding: 0px;
     border: 0;
     margin: 2px;
-    /* width: 150px;    */
     height: 200px;
 }
 
-.booktitle{
+.booktitle {
     vertical-align: bottom;
     font-size: smaller;
 }
