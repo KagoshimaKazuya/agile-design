@@ -94,6 +94,14 @@
     padding: 4px;
 }
 
+.message-admin{
+    display: inline-block;
+    background-color: #ffe7c3;
+    border-radius: 8px;
+    margin: 0px;
+    padding: 4px;
+}
+
 .input-block{
     text-align: left;
     margin: 18px;

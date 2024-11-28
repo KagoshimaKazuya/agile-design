@@ -111,38 +111,30 @@
 //     );
 // };
 
-import icon1 from './img/book1.jpg';
-import icon2 from './img/book2.jpg';
-import icon3 from './img/book3.jpg';
-import icon4 from './img/book4.jpg';
-import icon5 from './img/book5.jpg';
-import icon6 from './img/book6.jpg';
-import icon7 from './img/book7.jpg';
-import icon8 from './img/book8.jpg';
 import iconbmw from './img/bkmk_white.png';
 import iconbmc from './img/bkmk_colored.png';
 import './Top.css';
 import { useState } from "react";
 
 export const Top = (props) => {
-    const { setPageName } = props;
+    const { setPageName, books, bookmarks, setBookmarks } = props;
 
-    const [books, setBooks] = useState([
-        { title: 'なるほどデザイン', icon: icon1 },
-        { title: 'はじめてのUXデザイン図鑑', icon: icon2 },
-        { title: 'マーケットデザイン総論', icon: icon3 },
-        { title: '究極のロゴデザイン', icon: icon4 },
-        { title: 'WebデザインプロセスBook', icon: icon5 },
-        { title: 'コンセプトが伝わるデザインのロジック', icon: icon6 },
-        { title: 'ケアする人のためのプロジェクトデザイン', icon: icon7 },
-        { title: 'イメージをパッと形に変えるデザイン大全', icon: icon8 },
-    ]);
+    // const [books, setBooks] = useState([
+    //     { title: 'なるほどデザイン', icon: icon1 },
+    //     { title: 'はじめてのUXデザイン図鑑', icon: icon2 },
+    //     { title: 'マーケットデザイン総論', icon: icon3 },
+    //     { title: '究極のロゴデザイン', icon: icon4 },
+    //     { title: 'WebデザインプロセスBook', icon: icon5 },
+    //     { title: 'コンセプトが伝わるデザインのロジック', icon: icon6 },
+    //     { title: 'ケアする人のためのプロジェクトデザイン', icon: icon7 },
+    //     { title: 'イメージをパッと形に変えるデザイン大全', icon: icon8 },
+    // ]);
 
     // 検索バーの入力内容を管理するためのstate
     const [searchTerm, setSearchTerm] = useState('');
 
     // ブックマークの状態（どの本が「読みたい」とされたか）
-    const [bookmarks, setBookmarks] = useState([false, false, false, false, false, false, false, false]);
+    // const [bookmarks, setBookmarks] = useState([false, false, false, false, false, false, false, false]);
 
     // 「読みたい」本のみ表示するかどうかのstate
     const [showBookmarksOnly, setShowBookmarksOnly] = useState(false);

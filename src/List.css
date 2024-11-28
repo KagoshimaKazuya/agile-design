@@ -1,0 +1,115 @@
+.box-list{
+    border: solid;
+    border-color: grey;
+    text-align: left;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    overflow: auto;
+}
+
+.box-group{
+    /* width: 50%; */
+    border: solid;
+    text-align: left;
+    width: 40%;
+    height: 100%;
+    overflow: auto;
+    margin: 4px;
+}
+
+.box-chat{
+    border: solid;
+    border-color:white;
+    text-align: left;
+    width: 60%;
+    height: 100%;
+    
+}
+
+.item-book{
+    display: flex;
+    width: 95%;
+    height: 20%;
+    background-color: white;
+    border-color: rgb(197, 196, 196);
+    border: solid;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon-book{
+    width: 30%;
+    height: 100%;
+    text-align: center;
+}
+
+.book-icon{
+    height: 100%;
+    /* position: absolute;
+    right: 15%; */
+}
+
+.title-book{
+    width: 40%;
+    background-color: white;
+}
+
+.icon-group{
+    width: 30%;
+    background-color: white;
+    position: relative;
+}
+
+.text-booktitle{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.text-author{
+    color: grey;
+}
+
+.alert-icon{
+    text-align: right;
+}
+
+.book-emoji{
+    position:absolute;
+    left:1em;
+    bottom:0;
+}
+
+
+.mes-emoji{
+    position:absolute;
+    right:0.5em;
+    bottom:0;
+}
+
+.icon-button{
+    width: 4em;
+    height: 4em;
+    padding: 0;
+    border: 0;
+}
+
+.notice-img{
+    width: 30%;
+    margin: 8px;
+}
+
+.icon-img{
+    width: 100%;
+    background-color: grey;
+}
+
+.icon-img:hover{
+    opacity: 0.5;
+}
+
+.icon-img:active{
+    border-bottom: solid 2px white;
+    box-shadow: 0 0 2px rgbargba(0, 0, 0, 0.30);
+}
