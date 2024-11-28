@@ -9,7 +9,7 @@ export const SideMenu = (props) => {
 
     return(
         <>
-            <button className="top-button" onClick={onClickTitle}>社内図書館システム</button>
+            <button className="top-button" onClick={onClickTitle}>図書システム</button>
         </>
     );
 };

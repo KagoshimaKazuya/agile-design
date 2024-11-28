@@ -13,6 +13,7 @@ export const Chat = () => {
     const [quizanswer,setQuizAnswer] = useState("");
     const [quizoutput,setQuizOutput] = useState("");
     const [quizsubmit,setQuizSubmit] = useState(false);
+    const [elapsedTime, setElapsedTime] = useState(0);
 
     let scrollerInner;
 
@@ -43,10 +44,12 @@ export const Chat = () => {
 
     const onClickCreateQuiz = () => {
         setIsShowModal(true)
+        setElapsedTime(Date.now());
     }
 
     const onClickSubmit = () => {
         setQuizSubmit(true)
+        setElapsedTime(Date.now() - elapsedTime)
     }
 
     const onClickBack = () => {
@@ -81,6 +84,7 @@ export const Chat = () => {
                 <>
                     <p>あなたの回答：{quizoutput}</p>
                     <p>解答例：{quizanswer}</p>
+                    <p>回答時間：{elapsedTime / 1000}秒</p>
                     <div id="text-right">
                         <button className='create-button' onClick={onClickBack}>戻る</button>
                     </div>
